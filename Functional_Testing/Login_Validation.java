@@ -39,7 +39,7 @@ public class Login_Validation {
 	}
 
 	@BeforeMethod
-	public void beforeMethod() throws InterruptedException {
+	public void Browser_Setup() {
 		System.setProperty("webdriver.chrome.driver", Util.ChromeDrider);
 		driver = new ChromeDriver();
 		driver.get(Util.BaseUrl);
@@ -50,7 +50,7 @@ public class Login_Validation {
 	}
 
 	@AfterMethod
-	public void afterMethod() {
+	public void Browser_Terminate() {
 		driver.quit();
 	}
 
